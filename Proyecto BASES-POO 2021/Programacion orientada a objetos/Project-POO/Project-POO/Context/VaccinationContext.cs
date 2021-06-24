@@ -47,9 +47,7 @@ namespace Project_POO
             {
                 entity.ToTable("CABIN");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Adress)
                     .IsRequired()
@@ -70,9 +68,7 @@ namespace Project_POO
             {
                 entity.ToTable("CITIZEN");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Adress)
                     .IsRequired()
@@ -82,7 +78,11 @@ namespace Project_POO
 
                 entity.Property(e => e.Age).HasColumnName("age");
 
-                entity.Property(e => e.Dui).HasColumnName("DUI");
+                entity.Property(e => e.Dui)
+                    .IsRequired()
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("DUI");
 
                 entity.Property(e => e.Email)
                     .IsRequired()
@@ -156,9 +156,7 @@ namespace Project_POO
             {
                 entity.ToTable("EMPLOYEE");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Adress)
                     .IsRequired()
@@ -199,12 +197,10 @@ namespace Project_POO
             {
                 entity.ToTable("GESTOR");
 
-                entity.HasIndex(e => e.Username, "UQ__GESTOR__F3DBC572F9FB5C36")
+                entity.HasIndex(e => e.Username, "UQ__GESTOR__F3DBC572022CF443")
                     .IsUnique();
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Pass)
                     .IsRequired()
@@ -223,9 +219,7 @@ namespace Project_POO
             {
                 entity.ToTable("GESTORXCABIN");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.IdCabin).HasColumnName("id_cabin");
 
@@ -248,9 +242,7 @@ namespace Project_POO
             {
                 entity.ToTable("INSTITUTION");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Institution1)
                     .HasMaxLength(30)
@@ -262,9 +254,7 @@ namespace Project_POO
             {
                 entity.ToTable("REGISTER");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Gestor)
                     .IsRequired()
@@ -320,9 +310,7 @@ namespace Project_POO
             {
                 entity.ToTable("SICKNESS");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.IdCitizen).HasColumnName("id_citizen");
 
@@ -343,9 +331,7 @@ namespace Project_POO
             {
                 entity.ToTable("TYPE_EMPLOYEE");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedNever()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.TypeEmployee1)
                     .IsRequired()

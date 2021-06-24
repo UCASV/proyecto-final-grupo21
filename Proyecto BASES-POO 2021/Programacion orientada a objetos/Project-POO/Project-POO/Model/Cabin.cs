@@ -16,7 +16,7 @@ namespace Project_POO
 
         public int Id { get; set; }
         public string Email { get; set; }
-        public short Phone { get; set; }
+        public int Phone { get; set; }
         public string Adress { get; set; }
 
         public virtual ICollection<Consult> Consults { get; set; }

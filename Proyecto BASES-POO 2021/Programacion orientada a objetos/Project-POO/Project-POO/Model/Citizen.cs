@@ -16,10 +16,10 @@ namespace Project_POO
         public int Id { get; set; }
         public int IdGestor { get; set; }
         public int IdInstitution { get; set; }
-        public short Age { get; set; }
+        public int Age { get; set; }
         public string Email { get; set; }
-        public short Dui { get; set; }
-        public short Phone { get; set; }
+        public string Dui { get; set; }
+        public int Phone { get; set; }
         public string Adress { get; set; }
         public string FullName { get; set; }
 

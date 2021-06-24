@@ -4,15 +4,9 @@
     <projectFile>Project-POO/Project-POO.csproj</projectFile>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bb1f5644-4923-46d4-9b7f-966601988f14" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-POO/.idea/.gitignore" beforeDir="false" />
+    <list default="true" id="916084fc-7ed8-4865-b41f-46d747f4a142" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Project-POO/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Project-POO/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-POO.sln" beforeDir="false" afterPath="$PROJECT_DIR$/Project-POO.sln" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-POO/Context/VaccinationContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project-POO/Context/VaccinationContext.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-POO/Model/Cabin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project-POO/Model/Cabin.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-POO/Model/Citizen.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Project-POO/Model/Citizen.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-POO/Project-POO.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Project-POO/Project-POO.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-POO/View/Form1.Designer.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Project-POO/View/Form1.cs" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-POO/obj/Debug/net5.0-windows/Project-POO.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/Project-POO/obj/Debug/net5.0-windows/Project-POO.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Project-POO/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/Project-POO/obj/rider.project.restore.info" afterDir="false" />
     </list>
@@ -23,9 +17,8 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
-    <option name="RESET_MODE" value="KEEP" />
   </component>
-  <component name="ProjectId" id="1uPqULyGW2sNIqLAEzuMaVjuWXb" />
+  <component name="ProjectId" id="1uPsS8YZZVjA2CnMnD3M2heCxOi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -60,25 +53,14 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bb1f5644-4923-46d4-9b7f-966601988f14" name="Default Changelist" comment="" />
-      <created>1624577587917</created>
+      <changelist id="916084fc-7ed8-4865-b41f-46d747f4a142" name="Default Changelist" comment="" />
+      <created>1624578557354</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1624577587917</updated>
-      <workItem from="1624577592537" duration="757000" />
+      <updated>1624578557354</updated>
+      <workItem from="1624578562436" duration="184000" />
     </task>
     <servers />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />

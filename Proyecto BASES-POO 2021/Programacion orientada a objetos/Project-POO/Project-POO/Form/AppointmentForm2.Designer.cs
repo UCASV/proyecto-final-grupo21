@@ -49,6 +49,7 @@ namespace Project_POO
             this.lblChange = new System.Windows.Forms.Label();
             this.txtAge = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.btnRegistrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -180,7 +181,7 @@ namespace Project_POO
             this.lblChange.BackColor = System.Drawing.Color.Transparent;
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblChange.ForeColor = System.Drawing.Color.Black;
-            this.lblChange.Location = new System.Drawing.Point(85, 437);
+            this.lblChange.Location = new System.Drawing.Point(85, 497);
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(186, 27);
             this.lblChange.TabIndex = 17;
@@ -203,12 +204,25 @@ namespace Project_POO
             this.label9.TabIndex = 19;
             this.label9.Text = "Bienvenido a Programación de Citas";
             // 
+            // btnRegistrar
+            // 
+            this.btnRegistrar.BackColor = System.Drawing.Color.White;
+            this.btnRegistrar.ForeColor = System.Drawing.SystemColors.Desktop;
+            this.btnRegistrar.Location = new System.Drawing.Point(111, 439);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(136, 42);
+            this.btnRegistrar.TabIndex = 20;
+            this.btnRegistrar.Text = "Registrar Cita";
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            // 
             // AppointmentForm2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (136)))), ((int) (((byte) (182)))));
-            this.ClientSize = new System.Drawing.Size(347, 491);
+            this.ClientSize = new System.Drawing.Size(347, 545);
+            this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtAge);
             this.Controls.Add(this.lblChange);
@@ -233,6 +247,8 @@ namespace Project_POO
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button btnRegistrar;
 
         private System.Windows.Forms.Label label9;
 

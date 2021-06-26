@@ -26,6 +26,9 @@
       <Compile Update="Form\AppointmentForm2.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="Form\ProgrammingAppointmentForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

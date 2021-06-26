@@ -44,8 +44,8 @@ namespace Project_POO.Form
                 
                 Register register = new Register()
                 {
-                    LoginDay = (dtmPicker.Value = DateTime.Now).ToString(),
-                    LoginTime = (dtmPicker.Value = DateTime.Now).ToString(),
+                    LoginDay = (dtmPicker.Value).ToString(),
+                    LoginTime = (dtmPicker.Value.TimeOfDay).ToString(),
                     IdGestor = u.IdCabin,
                     Gestor = lblNameCabin.Text
                 };

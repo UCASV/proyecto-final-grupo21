@@ -40,8 +40,8 @@ namespace Project_POO
             };
             
             
-            bool Validation = txtName.Text.Length < 4 || txtAge.Text.Length < 0 || txtDUI.Text.Length < 7 || txtAdress.Text.Length < 5;
-            if (Validation )
+            bool Validation = txtName.Text.Length < 5 || txtAge.Text.Length < 0 || txtDUI.Text.Length < 8 || txtAdress.Text.Length < 5;
+            if (Validation)
             {
                 MessageBox.Show("Digite correctamente los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
@@ -49,7 +49,7 @@ namespace Project_POO
             {
                 db.Add(citizen);
                 db.SaveChanges();
-                MessageBox.Show("Se registró el ciudadano", "Registro exi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Hide();
                 
             }

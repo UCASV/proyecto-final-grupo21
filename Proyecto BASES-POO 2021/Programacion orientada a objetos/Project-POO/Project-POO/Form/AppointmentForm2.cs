@@ -21,10 +21,18 @@ namespace Project_POO
             ventana.Show();
         }
 
+<<<<<<< HEAD
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             var db = new VaccinationContext();
             List<Citizen> citizens = db.Citizens.ToList();
+=======
+
+        private void btnRegistrar_Click(object sender, EventArgs e)
+        {
+            var db = new VaccinationContext();
+            List<Citizen> citizenz = db.Citizens.ToList();
+>>>>>>> 6b6024e55ea0e019ccac9052e8d87b8facda8e7e
             Citizen citizen = new Citizen()
             {
                 FullName = txtName.Text,
@@ -34,11 +42,20 @@ namespace Project_POO
                 Phone = Convert.ToInt32(txtPhone.Text),
                 Email = txtMail.Text,
                 IdInstitution = ((Institution) cmbInstitution.SelectedItem).Id,
+<<<<<<< HEAD
                 
             };
 
             bool Validation = txtName.Text.Length < 5 || txtAge.Text.Length < 0 || txtDUI.Text.Length < 8 ||
                               txtAdress.Text.Length < 5;
+=======
+                // Sicknesses = txtSickness.Text, 
+                
+            };
+            
+            
+            bool Validation = txtName.Text.Length < 5 || txtAge.Text.Length < 0 || txtDUI.Text.Length < 8 || txtAdress.Text.Length < 5;
+>>>>>>> 6b6024e55ea0e019ccac9052e8d87b8facda8e7e
             if (Validation)
             {
                 MessageBox.Show("Digite correctamente los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -47,6 +64,7 @@ namespace Project_POO
             {
                 db.Add(citizen);
                 db.SaveChanges();
+<<<<<<< HEAD
                 MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 Hide();
@@ -54,6 +72,14 @@ namespace Project_POO
 
             }
 
+=======
+                MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Hide();
+                
+            }
+            
+            
+>>>>>>> 6b6024e55ea0e019ccac9052e8d87b8facda8e7e
         }
     }
     

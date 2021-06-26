@@ -109,3 +109,6 @@ C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASE
 C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\ref\Project-POO.dll
 C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project-POO.pdb
 C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project-POO.genruntimeconfig.cache
+C:\Users\gerar\Desktop\Ciclo 01 2021\BD\Proyecto BD-POO\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.AppointmentForm.resources
+C:\Users\gerar\Desktop\Ciclo 01 2021\BD\Proyecto BD-POO\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.AppointmentForm2.resources
+C:\Users\gerar\Desktop\Ciclo 01 2021\BD\Proyecto BD-POO\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project-POO.csproj.GenerateResource.cache

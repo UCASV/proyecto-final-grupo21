@@ -196,12 +196,9 @@ namespace Project_POO
             this.lblChange.BackColor = System.Drawing.Color.Transparent;
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblChange.ForeColor = System.Drawing.Color.Black;
-<<<<<<< HEAD
             this.lblChange.Location = new System.Drawing.Point(85, 497);
-=======
             this.lblChange.Location = new System.Drawing.Point(40, 538);
             this.lblChange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
->>>>>>> 6b6024e55ea0e019ccac9052e8d87b8facda8e7e
             this.lblChange.Name = "lblChange";
             this.lblChange.Size = new System.Drawing.Size(248, 33);
             this.lblChange.TabIndex = 17;
@@ -228,7 +225,6 @@ namespace Project_POO
             // 
             // btnRegistrar
             // 
-<<<<<<< HEAD
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.Desktop;
             this.btnRegistrar.Location = new System.Drawing.Point(111, 439);
@@ -237,14 +233,12 @@ namespace Project_POO
             this.btnRegistrar.TabIndex = 20;
             this.btnRegistrar.Text = "Registrar Cita";
             this.btnRegistrar.UseVisualStyleBackColor = false;
-=======
             this.btnRegistrar.Location = new System.Drawing.Point(315, 525);
             this.btnRegistrar.Name = "btnRegistrar";
             this.btnRegistrar.Size = new System.Drawing.Size(110, 46);
             this.btnRegistrar.TabIndex = 20;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
->>>>>>> 6b6024e55ea0e019ccac9052e8d87b8facda8e7e
             this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // AppointmentForm2
@@ -252,11 +246,8 @@ namespace Project_POO
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (136)))), ((int) (((byte) (182)))));
-<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(347, 545);
-=======
             this.ClientSize = new System.Drawing.Size(463, 604);
->>>>>>> 6b6024e55ea0e019ccac9052e8d87b8facda8e7e
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txtAge);
@@ -287,10 +278,6 @@ namespace Project_POO
 
         private System.Windows.Forms.Button btnRegistrar;
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 6b6024e55ea0e019ccac9052e8d87b8facda8e7e
         private System.Windows.Forms.Label label9;
 
         private System.Windows.Forms.TextBox txtAge;

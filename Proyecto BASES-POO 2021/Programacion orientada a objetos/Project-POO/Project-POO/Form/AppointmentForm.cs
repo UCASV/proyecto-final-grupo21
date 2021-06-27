@@ -14,8 +14,15 @@ namespace Project_POO
         private void btnStart_Click(object sender, EventArgs e)
         {
             Hide();
-            var ventana = new AppointmentForm2();
-            ventana.Show();
+            var window = new AppointmentForm2();
+            window.Show();
+        }
+
+        private void btnContinue_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var window = new ProgrammingAppointmentForm();
+            window.Show();
         }
     }
 }

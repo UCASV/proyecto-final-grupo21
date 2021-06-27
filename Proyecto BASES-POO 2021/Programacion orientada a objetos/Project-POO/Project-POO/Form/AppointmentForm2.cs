@@ -17,14 +17,14 @@ namespace Project_POO
         private void lblChange_Click(object sender, EventArgs e)
         {
             Hide();
-            var ventana = new AppointmentForm();
-            ventana.Show();
+            var window = new AppointmentForm();
+            window.Show();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
             var db = new VaccinationContext();
-            List<Citizen> citizenz = db.Citizens.ToList();
+            List<Citizen> citizens = db.Citizens.ToList();
             Citizen citizen = new Citizen()
             {
                 FullName = txtName.Text,
@@ -34,7 +34,6 @@ namespace Project_POO
                 Phone = Convert.ToInt32(txtPhone.Text),
                 Email = txtMail.Text,
                 IdInstitution = ((Institution) cmbInstitution.SelectedItem).Id,
-
             };
             bool Validation = txtName.Text.Length < 5 || txtAge.Text.Length < 0 || txtDUI.Text.Length < 8 ||
                               txtAdress.Text.Length < 5;
@@ -44,7 +43,7 @@ namespace Project_POO
             }
             else
             {
-                db.Add(citizen);
+                citizens.Add(citizen);
                 db.SaveChanges();
                 MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
@@ -52,7 +51,14 @@ namespace Project_POO
             }
             MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK,
                 MessageBoxIcon.Information);
-            this.Hide();
+            Hide();
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var window = new AppointmentForm();
+            window.Show();
         }
     }
 }

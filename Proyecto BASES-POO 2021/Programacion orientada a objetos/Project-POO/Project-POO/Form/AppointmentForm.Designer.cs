@@ -61,6 +61,7 @@ namespace Project_POO
             this.btnContinue.TabIndex = 1;
             this.btnContinue.Text = "Seguimiento de Cita Programada";
             this.btnContinue.UseVisualStyleBackColor = false;
+            this.btnContinue.Click += new System.EventHandler(this.btnContinue_Click);
             // 
             // label1
             // 
@@ -70,7 +71,8 @@ namespace Project_POO
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(325, 38);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Bienvenido a la Plataforma Virtual del Ministerio de Salud        para el Proceso" + " de Vacunación contra el COVID-19";
+            this.label1.Text = "Bienvenido a la Plataforma Virtual del Ministerio de Salud para el Proceso de Vac" + "unación contra el COVID-19";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AppointmentForm
             // 
@@ -82,6 +84,7 @@ namespace Project_POO
             this.Controls.Add(this.btnContinue);
             this.Controls.Add(this.btnStart);
             this.Name = "AppointmentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Appointment process";
             this.ResumeLayout(false);
         }

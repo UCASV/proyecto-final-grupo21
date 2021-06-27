@@ -36,6 +36,7 @@ namespace Project_POO
             this.label2 = new System.Windows.Forms.Label();
             this.txtVerification = new System.Windows.Forms.TextBox();
             this.btnVerification = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -48,7 +49,7 @@ namespace Project_POO
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(42, 73);
+            this.label2.Location = new System.Drawing.Point(43, 72);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(278, 18);
             this.label2.TabIndex = 1;
@@ -56,7 +57,7 @@ namespace Project_POO
             // 
             // txtVerification
             // 
-            this.txtVerification.Location = new System.Drawing.Point(54, 106);
+            this.txtVerification.Location = new System.Drawing.Point(57, 106);
             this.txtVerification.Name = "txtVerification";
             this.txtVerification.Size = new System.Drawing.Size(247, 20);
             this.txtVerification.TabIndex = 2;
@@ -64,12 +65,24 @@ namespace Project_POO
             // btnVerification
             // 
             this.btnVerification.BackColor = System.Drawing.Color.White;
-            this.btnVerification.Location = new System.Drawing.Point(70, 153);
+            this.btnVerification.Location = new System.Drawing.Point(57, 164);
             this.btnVerification.Name = "btnVerification";
-            this.btnVerification.Size = new System.Drawing.Size(215, 46);
+            this.btnVerification.Size = new System.Drawing.Size(113, 46);
             this.btnVerification.TabIndex = 3;
             this.btnVerification.Text = "Verificar Cita";
             this.btnVerification.UseVisualStyleBackColor = false;
+            this.btnVerification.Click += new System.EventHandler(this.btnVerification_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.White;
+            this.btnCancel.Location = new System.Drawing.Point(191, 164);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(113, 46);
+            this.btnCancel.TabIndex = 4;
+            this.btnCancel.Text = "Cancelar";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // ProgrammingAppointmentForm
             // 
@@ -77,15 +90,19 @@ namespace Project_POO
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (136)))), ((int) (((byte) (182)))));
             this.ClientSize = new System.Drawing.Size(360, 272);
+            this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnVerification);
             this.Controls.Add(this.txtVerification);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "ProgrammingAppointmentForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Verificación de Cita Programada";
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.Button btnCancel;
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;

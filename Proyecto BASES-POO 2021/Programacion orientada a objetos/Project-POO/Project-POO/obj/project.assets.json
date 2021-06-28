@@ -5772,6 +5772,9 @@
       "packagesPath": "C:\\Users\\gerar\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\gerar\\Desktop\\Ciclo 01 2021\\BD\\Proyecto BD-POO\\proyecto-final-grupo21\\Proyecto BASES-POO 2021\\Programacion orientada a objetos\\Project-POO\\Project-POO\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
         "C:\\Users\\gerar\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
@@ -5779,6 +5782,8 @@
         "net5.0-windows"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Users\\ACER\\Downloads": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

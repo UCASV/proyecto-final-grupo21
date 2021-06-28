@@ -6,7 +6,7 @@ using Project_POO.Context;
 
 namespace Project_POO
 {
-    public partial class Step3Form : Form
+    public partial class Step3Form : System.Windows.Forms.Form
     {
         int tiempo = 0;
         public Step3Form()

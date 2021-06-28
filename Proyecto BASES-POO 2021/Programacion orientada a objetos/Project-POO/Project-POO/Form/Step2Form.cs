@@ -10,7 +10,7 @@ using System.Linq;
 
 namespace Project_POO
 {
-    public partial class Step2Form : Form
+    public partial class Step2Form : System.Windows.Forms.Form
     {
         public Step2Form()
         {

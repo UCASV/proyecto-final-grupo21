@@ -35,6 +35,9 @@
       <Compile Update="Form\Step3Form.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="Form\LoginEmployeeForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

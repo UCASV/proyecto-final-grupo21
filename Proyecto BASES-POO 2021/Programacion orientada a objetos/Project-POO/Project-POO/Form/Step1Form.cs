@@ -11,7 +11,7 @@ using System.Linq;
 
 namespace Project_POO
 {
-    public partial class Step1Form : Form
+    public partial class Step1Form : System.Windows.Forms.Form
     {
         public Step1Form()
         {

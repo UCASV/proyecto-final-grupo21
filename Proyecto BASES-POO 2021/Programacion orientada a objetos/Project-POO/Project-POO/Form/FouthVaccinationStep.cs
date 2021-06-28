@@ -2,7 +2,7 @@
 
 namespace Project_POO
 {
-    public partial class FouthVaccinationStep : Form
+    public partial class FouthVaccinationStep : System.Windows.Forms.Form
     {
         public FouthVaccinationStep()
         {

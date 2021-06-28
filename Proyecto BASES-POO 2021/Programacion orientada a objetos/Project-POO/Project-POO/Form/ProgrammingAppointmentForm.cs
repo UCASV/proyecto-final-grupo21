@@ -9,7 +9,7 @@ using System.Linq;
 
 namespace Project_POO
 {
-    public partial class ProgrammingAppointmentForm : Form
+    public partial class ProgrammingAppointmentForm : System.Windows.Forms.Form
     {
         public ProgrammingAppointmentForm()
         {

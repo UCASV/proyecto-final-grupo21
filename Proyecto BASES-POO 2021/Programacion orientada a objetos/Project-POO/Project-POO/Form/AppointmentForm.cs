@@ -1,9 +1,10 @@
 ﻿using System;
-using System.Windows.Forms;
+
+
 
 namespace Project_POO
 {
-    public partial class AppointmentForm : Form
+    public partial class AppointmentForm : System.Windows.Forms.Form
     {
         public AppointmentForm()
         {

@@ -9,7 +9,7 @@ using Project_POO.Model;
 
 namespace Project_POO
 {
-    public partial class AppointmentForm2 : Form
+    public partial class AppointmentForm2 : System.Windows.Forms.Form
     {
         public AppointmentForm2()
         {

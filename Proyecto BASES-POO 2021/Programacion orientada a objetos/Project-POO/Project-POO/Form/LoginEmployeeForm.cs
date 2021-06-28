@@ -19,15 +19,15 @@ namespace Project_POO.Form
         {
             var db = new VaccinationContext();
 
-            var listaEmployees = db.Employees
+            var listaGestors = db.Gestors
                 .OrderBy(c => c.Id)
                 .ToList();
-            var result = listaEmployees.Where(
-                u => u.EmployeeName.Equals(txtEmployee.Text) &&
-                     u.Id.Equals(Convert.ToInt32(txtId.Text))
+            var result = listaGestors.Where(
+                u => u.Username.Equals(txtUsername.Text) &&
+                     u.Pass.Equals(txtPass.Text)
             ).ToList();
 
-            Employee u = result[0];
+            Gestor u = result[0];
 
             if (result.Count == 0)
 
@@ -45,8 +45,8 @@ namespace Project_POO.Form
                 {
                     LoginDay = dtmPicker.Value.ToString("dd/MM/yyyy"),
                     LoginTime = (dtmPicker.Value.TimeOfDay).ToString(),
-                    IdGestor = u.IdCabin,
-                    Gestor = u.EmployeeName
+                    IdGestor = u.Id,
+                    Gestor = u.Username
                 };
                 db.Add(register);
                 db.SaveChanges();

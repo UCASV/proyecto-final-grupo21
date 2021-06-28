@@ -17,9 +17,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Compile Update="Form\Form1.cs">
-        <SubType>Form</SubType>
-      </Compile>
       <Compile Update="Form\AppointmentForm.cs">
         <SubType>Form</SubType>
       </Compile>
@@ -27,6 +24,9 @@
         <SubType>Form</SubType>
       </Compile>
       <Compile Update="Form\ProgrammingAppointmentForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
+      <Compile Update="Form\FouthVaccinationStep.cs">
         <SubType>Form</SubType>
       </Compile>
     </ItemGroup>

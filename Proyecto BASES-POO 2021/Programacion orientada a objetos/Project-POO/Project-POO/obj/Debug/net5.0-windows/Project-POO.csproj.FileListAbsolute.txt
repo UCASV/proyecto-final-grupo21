@@ -180,3 +180,23 @@ C:\Users\gerar\Desktop\Ciclo 01 2021\BD\Proyecto BD-POO\proyecto-final-grupo21\P
 C:\Users\gerar\Desktop\Ciclo 01 2021\BD\Proyecto BD-POO\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.Form.Form1.resources
 C:\Users\gerar\Desktop\Ciclo 01 2021\BD\Proyecto BD-POO\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.FouthVaccinationStep.resources
 C:\Users\gerar\Desktop\Ciclo 01 2021\BD\Proyecto BD-POO\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.Form.LoginEmployeeForm.resources
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.Form.Form1.resources
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.FouthVaccinationStep.resources
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.Form.LoginEmployeeForm.resources
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.Step1Form.resources
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.Step2Form.resources
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\obj\Debug\net5.0-windows\Project_POO.Step3Form.resources
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\Common.Logging.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\Common.Logging.Core.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.barcodes.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.forms.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.io.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.kernel.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.layout.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.pdfa.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.sign.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.styledxmlparser.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\itext.svg.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\Microsoft.Extensions.DependencyModel.dll
+C:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\bin\Debug\net5.0-windows\BouncyCastle.Crypto.dll

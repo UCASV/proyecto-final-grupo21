@@ -31,7 +31,11 @@ namespace Project_POO
                 }
                 else
                 {
+                    var consults = db.Consults.ToList();
+                    
                     Hide();
+                    var window = new AppointmentForm();
+                    window.Show();
                 }
             }
         }

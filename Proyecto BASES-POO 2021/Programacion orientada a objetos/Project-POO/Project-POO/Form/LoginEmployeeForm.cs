@@ -48,8 +48,38 @@ namespace Project_POO.Form
                     IdGestor = u.Id,
                     Gestor = u.Username
                 };
-                db.Add(register);
+                registers.Add(register);
                 db.SaveChanges();
+                Hide();
+                var window = new AppointmentForm();
+                window.Show();
+            }
+        }
+
+        private void btnSignIn_Click(object sender, EventArgs e)
+        {
+            var db = new VaccinationContext();
+            var gestores = db.Gestors.ToList();
+            Gestor gestor = new Gestor()
+            {
+                Username = txtUsername.Text,
+                Pass = txtPass.Text
+            };
+
+            bool validation = txtUsername.Text.Length < 5 || txtPass.Text.Length < 5;
+
+            if (validation)
+            {
+                MessageBox.Show("Error al ingresar usuario, la cantidad de caracteres introducidos es menor a 5",
+                    "¡Intente de nuevo!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else
+            {
+                gestores.Add(gestor);
+                db.SaveChanges();
+                Hide();
+                var window = new AppointmentForm();
+                window.Show();
             }
         }
     }

@@ -33,7 +33,7 @@ namespace Project_POO
                 Adress = txtAdress.Text,
                 Phone = Convert.ToInt32(txtPhone.Text),
                 Email = txtMail.Text,
-                IdInstitution = ((Institution) cmbInstitution.SelectedItem).Id,
+                //IdInstitution = ((Institution) cmbInstitution.SelectedItem).Id,
             };
             bool Validation = txtName.Text.Length < 5 || txtAge.Text.Length < 0 || txtDUI.Text.Length < 8 ||
                               txtAdress.Text.Length < 5;

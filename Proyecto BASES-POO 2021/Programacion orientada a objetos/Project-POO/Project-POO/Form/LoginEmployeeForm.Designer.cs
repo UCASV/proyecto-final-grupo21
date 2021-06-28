@@ -33,10 +33,10 @@ namespace Project_POO.Form
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginEmployeeForm));
             this.btnLog = new System.Windows.Forms.Button();
-            this.txtEmployee = new System.Windows.Forms.TextBox();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblName = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
+            this.txtPass = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.dtmPicker = new System.Windows.Forms.DateTimePicker();
@@ -55,14 +55,22 @@ namespace Project_POO.Form
             this.btnLog.UseVisualStyleBackColor = true;
             this.btnLog.Click += new System.EventHandler(this.btnLog_Click);
             // 
-            // txtEmployee
+            // txtUsername
             // 
+<<<<<<< HEAD
             this.txtEmployee.Location = new System.Drawing.Point(169, 91);
             this.txtEmployee.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmployee.Multiline = true;
             this.txtEmployee.Name = "txtEmployee";
             this.txtEmployee.Size = new System.Drawing.Size(219, 28);
             this.txtEmployee.TabIndex = 1;
+=======
+            this.txtUsername.Location = new System.Drawing.Point(225, 112);
+            this.txtUsername.Multiline = true;
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(291, 34);
+            this.txtUsername.TabIndex = 1;
+>>>>>>> 64867f76a42827af3f7a9da14660dd3c277e32af
             // 
             // lblName
             // 
@@ -86,14 +94,22 @@ namespace Project_POO.Form
             this.label1.Text = "ID:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // txtId
+            // txtPass
             // 
+<<<<<<< HEAD
             this.txtId.Location = new System.Drawing.Point(169, 149);
             this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.Size = new System.Drawing.Size(210, 28);
             this.txtId.TabIndex = 4;
+=======
+            this.txtPass.Location = new System.Drawing.Point(225, 183);
+            this.txtPass.Multiline = true;
+            this.txtPass.Name = "txtPass";
+            this.txtPass.Size = new System.Drawing.Size(279, 34);
+            this.txtPass.TabIndex = 4;
+>>>>>>> 64867f76a42827af3f7a9da14660dd3c277e32af
             // 
             // label2
             // 
@@ -134,10 +150,10 @@ namespace Project_POO.Form
             this.Controls.Add(this.dtmPicker);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.txtPass);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblName);
-            this.Controls.Add(this.txtEmployee);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnLog);
             this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -152,9 +168,9 @@ namespace Project_POO.Form
 
         private System.Windows.Forms.PictureBox pictureBox1;
 
-        private System.Windows.Forms.TextBox txtEmployee;
+        private System.Windows.Forms.TextBox txtUsername;
 
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.TextBox txtPass;
         private System.Windows.Forms.Label label2;
 
         private System.Windows.Forms.Label label1;

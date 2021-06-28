@@ -48,8 +48,11 @@ namespace Project_POO.Form
                     IdGestor = u.IdCabin,
                     Gestor = u.EmployeeName
                 };
-                db.Add(register);
+                registers.Add(register);
                 db.SaveChanges();
+                Hide();
+                var window = new AppointmentForm();
+                window.Show();
             }
         }
     }

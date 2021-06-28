@@ -20,6 +20,11 @@
       <Compile Update="Form\Form1.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Remove="Form\frmVaccination.cs" />
+      <Compile Remove="Form\frmVaccination.Designer.cs" />
+      <Compile Update="Form\frmVaccine.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

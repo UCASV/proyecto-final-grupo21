@@ -86,6 +86,7 @@ namespace Project_POO
             this.btnVaccinationProcess.TabIndex = 3;
             this.btnVaccinationProcess.Text = "Iniciar Proceso de Vacunación";
             this.btnVaccinationProcess.UseVisualStyleBackColor = false;
+            this.btnVaccinationProcess.Click += new System.EventHandler(this.btnVaccinationProcess_Click);
             // 
             // AppointmentForm
             // 

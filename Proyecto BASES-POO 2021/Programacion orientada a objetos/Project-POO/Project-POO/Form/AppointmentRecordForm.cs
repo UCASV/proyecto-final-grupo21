@@ -74,7 +74,7 @@ namespace Project_POO.Form
                     IdCabin = save,
                     IdCitizen = secondSave
                 };
-                consults.Add(consult);
+                db.Add(consult);
                 db.SaveChanges();
                 Hide();
                 var window = new AppointmentForm();

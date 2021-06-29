@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 using Project_POO.Context;
+using Project_POO.Model;
+using Project_POO.ViewModel;
 
 namespace Project_POO
 {
@@ -33,15 +36,32 @@ namespace Project_POO
         }
 
         private void button1_Click(object sender, EventArgs e)
-        { 
-            dataGridView.DataSource = null;
-            if (!showFromDb)
+        {
+            var db = new VaccinationContext();
+            var listaCitizen = db.Citizens
+                .OrderBy(c => c.Id)
+                .ToList();
+            //Busco el dui 
+            var result = listaCitizen.Where(
+                u => u.Dui.Equals(txtDui.Text)
+                ).ToList();
+
+            if (result.Count == 0)
             {
-                // Cargando citas en el DGV
-                using (var context = new VaccinationContext())
+                MessageBox.Show("No se encontró ningun ciudadano registrado con el dui digitado", "Búsqueda",
+                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            else
+            {
+                if (!showFromDb)
                 {
-                    var newDS = context.Consults.ToList();
-                    dataGridView.DataSource = newDS;
+                    var citizen = db.Citizens.ToList();
+                    var mappedDS = new List<CitizenVM>();
+                    foreach (var item in citizen.Where(i => i.Dui == txtDui.Text))
+                    {
+                        mappedDS.Add(VaccinationMapper.MapCitizenVm(item));
+                    }
+                    dataGridView.DataSource = mappedDS;
                 }
             }
         }

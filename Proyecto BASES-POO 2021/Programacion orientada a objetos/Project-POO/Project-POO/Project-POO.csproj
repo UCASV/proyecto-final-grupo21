@@ -39,6 +39,9 @@
       <Compile Update="Form\LoginEmployeeForm.cs">
         <SubType>Form</SubType>
       </Compile>
+      <Compile Update="Form\AppointmentRecordForm.cs">
+        <SubType>Form</SubType>
+      </Compile>
     </ItemGroup>
 
     <ItemGroup>

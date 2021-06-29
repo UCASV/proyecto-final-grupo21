@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Project_POO.Context;
+using Project_POO.Form;
 using Project_POO.Model;
 
 namespace Project_POO
@@ -72,65 +73,9 @@ namespace Project_POO
                 citizens.Add(citizen);
                 MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
-                
-                //agregando fecha para cita de primera dosis
-                var oneDate = new Random();
-                DateTime date = new DateTime(2021,07,01);
-                DateTime secondDate = new DateTime(2021,07,15);
-                int range = (secondDate - date).Days;
-                DateTime finalDate = date.AddDays(oneDate.Next(range));
-
-                //agregando hora para cita de primera dosis
-                var oneHour = new Random();
-                DateTime hour = new DateTime(2021, 07, 01);
-                DateTime secondHour = new DateTime(2021,07,01);
-                int secondRange = (secondHour - hour).Hours;
-                DateTime finalHour = hour.AddHours(oneHour.Next(secondRange));
-
-                var cabins = db.Cabins.ToList();
-                var save = 0;
-                
-                foreach (var cabin in cabins)
-                {
-                    var idCabin = 1;
-                    if (cabin.Id != idCabin)
-                    {
-                        MessageBox.Show("no se encontró la cabina a programar");
-                    }
-                    else
-                    {
-                        save = cabin.Id;
-                    }
-
-                }
-
-                var secondSave = 0;
-                foreach (var secondCitizen in citizens)
-                {
-                    var idCitizen = 1;
-                    if (secondCitizen.Id != idCitizen)
-                    {
-                        MessageBox.Show("No se encontró el Id del ciudadano");
-                    }
-                    else
-                    {
-                        secondSave = secondCitizen.Id;
-                    }
-                }
-                
-                var consults = db.Consults.ToList();
-                Consult consult = new Consult()
-                {
-                    ConsultationDay = Convert.ToString(finalDate),
-                    ConsultationTime = Convert.ToString(finalHour),
-                    IdCabin = save,
-                    IdCitizen = secondSave
-                };
-                
-                consults.Add(consult);
                 db.SaveChanges();
                 Hide();
-                var window = new AppointmentForm();
+                var window = new AppointmentRecordForm();
                 window.Show();
             }
            

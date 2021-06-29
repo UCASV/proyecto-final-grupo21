@@ -1,11 +1,8 @@
 ﻿using System.Windows.Forms;
 using System;
-using System.Data.Common;
-using Microsoft.EntityFrameworkCore;
-using Project_POO.Context;
-using Project_POO.Model;
-using Project_POO.Context;
+
 using System.Linq;
+using Project_POO.Context;
 
 namespace Project_POO
 {
@@ -32,6 +29,17 @@ namespace Project_POO
                 else
                 {
                     var consults = db.Consults.ToList();
+                    foreach (var consult in consults)
+                    {
+                        if (citizen.Id != consult.IdCitizen)
+                        {
+                            MessageBox.Show("no se encuentra la cita programada del cliente");
+                        }
+                        else
+                        {
+                            Console.WriteLine(citizen);
+                        }
+                    }
                     
                     Hide();
                     var window = new AppointmentForm();

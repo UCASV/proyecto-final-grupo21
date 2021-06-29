@@ -18,11 +18,7 @@ namespace Project_POO
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
-            Application.Run(new AppointmentRecordForm());
-=======
-            Application.Run(new Step3Form());
->>>>>>> c4ca57421138bc878ffcdfc4064734f815fe6cf7
+            Application.Run(new LoginEmployeeForm());
         }
     }
 }

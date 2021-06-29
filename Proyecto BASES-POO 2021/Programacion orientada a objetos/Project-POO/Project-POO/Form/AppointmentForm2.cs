@@ -46,6 +46,7 @@ namespace Project_POO
                 Phone = phone,
                 Email = email,
                 IdInstitution = institucion,
+                
             };
 
             bool Validation = txtName.Text.Length < 5 || txtAge.Text.Length < 0 || txtDUI.Text.Length < 8 ||
@@ -70,9 +71,10 @@ namespace Project_POO
             }
             else
             {
-                citizens.Add(citizen);
+                
                 MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+                db.Add(citizen);
                 db.SaveChanges();
                 Hide();
                 var window = new AppointmentRecordForm();

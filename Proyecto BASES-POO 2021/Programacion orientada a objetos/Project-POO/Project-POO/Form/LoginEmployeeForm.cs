@@ -27,11 +27,10 @@ namespace Project_POO.Form
                      u.Pass.Equals(txtPass.Text)
             ).ToList();
 
-            Gestor g = result[0];
+            Gestor gestor = result[0];
 
             if (result.Count == 0)
-
-
+                
                 MessageBox.Show("El usuario no existe", "Gestor de vacunación",
                     MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             else
@@ -45,10 +44,10 @@ namespace Project_POO.Form
                 {
                     LoginDay = dtmPicker.Value.ToString("dd/MM/yyyy"),
                     LoginTime = (dtmPicker.Value.TimeOfDay).ToString(),
-                    IdGestor = g.Id,
-                    Gestor = g.Username
+                    IdGestor = gestor.Id,
+                    Gestor = gestor.Username
                 };
-                registers.Add(register);
+                db.Add(register);
                 db.SaveChanges();
                 Hide();
                 var window = new AppointmentForm();
@@ -75,12 +74,12 @@ namespace Project_POO.Form
             }
             else
             {
-                gestores.Add(gestor);
+                db.Add(gestor);
                 db.SaveChanges();
                 Hide();
                 var window = new AppointmentForm();
                 window.Show();
-            }
+            } 
         }
     }
 }

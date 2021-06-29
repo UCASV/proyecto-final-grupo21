@@ -27,7 +27,7 @@ namespace Project_POO.Form
                      u.Pass.Equals(txtPass.Text)
             ).ToList();
 
-            Gestor u = result[0];
+            Gestor g = result[0];
 
             if (result.Count == 0)
 
@@ -45,8 +45,8 @@ namespace Project_POO.Form
                 {
                     LoginDay = dtmPicker.Value.ToString("dd/MM/yyyy"),
                     LoginTime = (dtmPicker.Value.TimeOfDay).ToString(),
-                    IdGestor = u.Id,
-                    Gestor = u.Username
+                    IdGestor = g.Id,
+                    Gestor = g.Username
                 };
                 registers.Add(register);
                 db.SaveChanges();

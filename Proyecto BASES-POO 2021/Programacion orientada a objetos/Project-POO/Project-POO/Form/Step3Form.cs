@@ -8,6 +8,7 @@ namespace Project_POO
 {
     public partial class Step3Form : System.Windows.Forms.Form
     {
+        private bool showFromDb = false;
         int tiempo = 0;
         public Step3Form()
         {
@@ -29,6 +30,20 @@ namespace Project_POO
             timer.Enabled = true;
             prbVacunando.Value = 0;
 
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        { 
+            dataGridView.DataSource = null;
+            if (!showFromDb)
+            {
+                // Cargando citas en el DGV
+                using (var context = new VaccinationContext())
+                {
+                    var newDS = context.Consults.ToList();
+                    dataGridView.DataSource = newDS;
+                }
+            }
         }
     }
 }

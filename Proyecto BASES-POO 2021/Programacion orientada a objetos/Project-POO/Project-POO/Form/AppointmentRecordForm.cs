@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using Microsoft.Data.SqlClient;
@@ -13,7 +14,6 @@ namespace Project_POO.Form
         {
             InitializeComponent();
         }
-
         private void txtDate_TextChanged(object sender, EventArgs e)
         {
             var db = new VaccinationContext();
@@ -80,6 +80,19 @@ namespace Project_POO.Form
                 var window = new AppointmentForm();
                 window.Show();
                 
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var places = new List<string>()
+            {
+              "Hospital El Salvador",
+              "ISSS, San Salvador",
+              "Hospital San Rafael",
+              "Hospital Maternidad",
+              "Hospital MQ"
+            };
+            comboBox1.DataSource = places;
         }
     }
 }

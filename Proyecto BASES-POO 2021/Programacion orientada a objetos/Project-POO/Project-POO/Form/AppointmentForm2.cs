@@ -35,6 +35,7 @@ namespace Project_POO
             var db = new VaccinationContext();
             List<Citizen> citizens = db.Citizens.ToList();
             var sicknesses = db.Sicknesses.ToList();
+            
             var Sickness = new Sickness()
             {
                 Sickness1 = sickness
@@ -55,20 +56,20 @@ namespace Project_POO
             bool validatePriorityGroup = ValidatePriorityGroup(AgeParse,institucion );
             bool Validation = ValidateData(FullName, Age, dui, address, phone, email, AgeParse);
 
-            if (!validatePriorityGroup)
-            {
-                MessageBox.Show("Usted pertenece a uno de los grupos de prioridad de vacunación", "Registrando...",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            if (Validation)
+            if (!Validation)
             {
                 MessageBox.Show("Digite correctamente los campos", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
-                db.Add(citizen);
+                if (validatePriorityGroup)
+                {
+                    MessageBox.Show("Usted pertenece a uno de los grupos de prioridad de vacunación", "Registrando...",
+                        MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    db.Add(citizen);
+                }
                 db.SaveChanges();
                 Hide();
                 var window = new AppointmentRecordForm();

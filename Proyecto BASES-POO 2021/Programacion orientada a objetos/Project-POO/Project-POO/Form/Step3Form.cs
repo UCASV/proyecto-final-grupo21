@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
 using Project_POO.Context;
 using Project_POO.Model;
 using Project_POO.ViewModel;
@@ -38,32 +39,30 @@ namespace Project_POO
         private void button1_Click(object sender, EventArgs e)
         {
             var db = new VaccinationContext();
-            var listaCitizen = db.Citizens
-                .OrderBy(c => c.Id)
-                .ToList();
-            //Busco el dui 
-            var result = listaCitizen.Where(
-                u => u.Dui.Equals(txtDui.Text)
-                ).ToList();
-
-            if (result.Count == 0)
-            {
-                MessageBox.Show("No se encontró ningun ciudadano registrado con el dui digitado", "Búsqueda",
-                    MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
-            }
-            else
-            {
-                if (!showFromDb)
+            
+            var listPatient = db.Consults
+                .Include(i => i.IdCitizenNavigation)
+                .Include(i=> i.IdCabinNavigation)
+                .Where(i=> i.IdCitizenNavigation.Dui.Equals(txtDui.Text))
+                .Select(x => new
                 {
-                    var citizen = db.Citizens.ToList();
-                    var mappedDS = new List<CitizenVM>();
-                    foreach (var item in citizen.Where(i => i.Dui == txtDui.Text))
-                    {
-                        mappedDS.Add(VaccinationMapper.MapCitizenVm(item));
-                    }
-                    dataGridView.DataSource = mappedDS;
-                }
-            }
+                    //Numero_de_cita = x.Id,
+                    Nombre = x.IdCitizenNavigation.FullName,
+                    DUI = x.IdCitizenNavigation.Dui,
+                    Telefono = x.IdCitizenNavigation.Phone,
+                    Direccion = x.IdCitizenNavigation.Adress,
+                    //Email = x.IdCitizenNavigation.Email,
+                    Cabina = x.IdCabinNavigation.Adress,
+                    Fecha_cita = Convert.ToDateTime(x.ConsultationDay.ToString()).ToString("yyyy-MM-dd"),
+                    Hora_cita = x.ConsultationTime,
+                    //Hora_llegada = x.HourArrival,
+                    //Hora_vacuna = x.HourVaccine
+                })
+                .ToList();
+            
+            dataGridView.DataSource = null;
+            dataGridView.DataSource = listPatient; 
+            
         }
     }
 }

@@ -1,13 +1,18 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-
+using System.Data;
+using System.Data.Sql;
+using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 #nullable disable
 using Project_POO.Model;
 namespace Project_POO.Context
 {
+
     public partial class VaccinationContext : DbContext
     {
+
         public VaccinationContext()
         {
         }
@@ -35,7 +40,7 @@ namespace Project_POO.Context
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Server=DESKTOP-KERD99S;Database=VacunacionDB;Trusted_Connection=True;");
+                optionsBuilder.UseSqlServer("Server=LAPTOP-AU4EUCNG\\MSSQLSERVER01;Database=VacunacionDB;Trusted_Connection=True;");
             }
         }
 

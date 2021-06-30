@@ -45,11 +45,11 @@ namespace Project_POO
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(155, 9);
+            this.label1.Location = new System.Drawing.Point(188, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(465, 49);
             this.label1.TabIndex = 50;
-            this.label1.Text = "Aplicacion de primera dosis";
+            this.label1.Text = "Seguimiento de Citas\r\n";
             // 
             // btnDui
             // 

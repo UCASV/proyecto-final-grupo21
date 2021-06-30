@@ -32,11 +32,20 @@ namespace Project_POO
             string phone = txtPhone.Text;
             string email = txtMail.Text;
             int institucion = ((Institution) cmbInstitution.SelectedItem).Id;
+            string sickness = txtSickness.Text;
             
             ValidateData(FullName, Age, dui, address, phone, email, AgeParse);
             
             var db = new VaccinationContext();
             List<Citizen> citizens = db.Citizens.ToList();
+            var sicknesses = db.Sicknesses.ToList();
+            var Sickness = new Sickness()
+            {
+                Sickness1 = sickness
+            };
+            sicknesses.Add(Sickness);
+            
+            
             Citizen citizen = new Citizen()
             {
                 FullName = FullName,
@@ -46,7 +55,7 @@ namespace Project_POO
                 Phone = phone,
                 Email = email,
                 IdInstitution = institucion,
-                
+                Sicknesses = sicknesses
             };
 
             bool Validation = txtName.Text.Length < 5 || txtAge.Text.Length < 0 || txtDUI.Text.Length < 8 ||

@@ -36,24 +36,24 @@ namespace Project_POO.Form
             string save = "";
             string secondSave = "";
             var cabins = db.Cabins.ToList();
-            
+
             if (txtCabin.Text.Length != 0)
             {
                 var idCabin = cabins.Where(cabin => cabin.Id.Equals(txtCabin.Text)).ToList();
-            
+
                 foreach (var cabin in idCabin)
                 {
                     save = Convert.ToString(cabin.Id);
                 }
-    
+
             }
             else
             {
-                MessageBox.Show("Número de cabina inexsistente", "ingrese un número de cabina existente", 
+                MessageBox.Show("Número de cabina inexsistente", "ingrese un número de cabina existente",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            
+
+
             var citizens = db.Citizens.ToList();
 
             if (txtIdCitizen.Text.Length != 0)
@@ -62,15 +62,15 @@ namespace Project_POO.Form
                 foreach (var citizen in idCitizen)
                 {
                     secondSave = Convert.ToString(citizen.Id);
-                }    
+                }
             }
             else
             {
                 MessageBox.Show("Error, id de ciudadano inexsistente", "Ingrese un id válido",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
-            
+
+
             var consults = db.Consults.ToHashSet();
             Consult consult = new Consult()
             {
@@ -80,6 +80,32 @@ namespace Project_POO.Form
                 IdCitizen = Convert.ToInt32(secondSave)
             };
             consults.Add(consult);
+
+        var processes = db.VaccinationProcesses.ToHashSet();
+            var Process = new VaccinationProcess()
+            {
+                VaccunationDay = date,
+                VaccunationTime = hour,
+                VaccunationPlace = (string) (comboBox1.SelectedItem)
+            };
+            processes.Add(Process);
+
+            int consultId = 0;
+
+            foreach (var c in consults)
+            {
+                if (c.ConsultationDay != Process.VaccunationDay)
+                {
+                    MessageBox.Show("Cita equivocada", "verifique la cita registrada", MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+                else
+                {
+                    consultId = c.Id;
+                }
+            }
+            Process.IdConsult = consultId;
+            
             db.SaveChanges();
             Hide();
             var window = new AppointmentForm();

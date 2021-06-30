@@ -1,5 +1,6 @@
 ﻿using Project_POO.Model;
 using Project_POO.Context;
+using System;
 namespace Project_POO.ViewModel
 {
     //Map -> Conversion o alteracion de un objeto(elemento) a otro
@@ -27,7 +28,7 @@ namespace Project_POO.ViewModel
                 IdInstitution = t.IdInstitution,
                 Adress = t.Adress,
                 Email = t.Email,
-                Phone = t.Phone
+                Phone = Convert.ToString(t.Phone)
             };
         }
     }

@@ -1,18 +1,13 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
-using System.Data;
-using System.Data.Sql;
-using System.Data.SqlClient;
-using Microsoft.Data.SqlClient;
-#nullable disable
-using Project_POO.Model;
-namespace Project_POO.Context
-{
 
+#nullable disable
+
+namespace Project_POO
+{
     public partial class VaccinationContext : DbContext
     {
-
         public VaccinationContext()
         {
         }
@@ -46,16 +41,16 @@ namespace Project_POO.Context
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.HasAnnotation("Relational:Collation", "SQL_Latin1_General_CP1_CI_AS");
+            modelBuilder.HasAnnotation("Relational:Collation", "Modern_Spanish_CI_AS");
 
             modelBuilder.Entity<Cabin>(entity =>
             {
                 entity.ToTable("CABIN");
 
-                entity.HasIndex(e => e.Email, "UQ__CABIN__AB6E61648636306A")
+                entity.HasIndex(e => e.Email, "UQ__CABIN__AB6E616474775BEA")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Phone, "UQ__CABIN__B43B145FB530B0EA")
+                entity.HasIndex(e => e.Phone, "UQ__CABIN__B43B145F77CF4829")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -79,16 +74,16 @@ namespace Project_POO.Context
             {
                 entity.ToTable("CITIZEN");
 
-                entity.HasIndex(e => e.Adress, "UQ__CITIZEN__08D1A4B8A6B963C4")
+                entity.HasIndex(e => e.Adress, "UQ__CITIZEN__08D1A4B856963338")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Email, "UQ__CITIZEN__AB6E61648ADF484B")
+                entity.HasIndex(e => e.Email, "UQ__CITIZEN__AB6E6164D1782CED")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Phone, "UQ__CITIZEN__B43B145FA00AF96F")
+                entity.HasIndex(e => e.Phone, "UQ__CITIZEN__B43B145F91933365")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Dui, "UQ__CITIZEN__C03671B95B91E572")
+                entity.HasIndex(e => e.Dui, "UQ__CITIZEN__C03671B96340C409")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -129,13 +124,13 @@ namespace Project_POO.Context
                     .WithMany(p => p.Citizens)
                     .HasForeignKey(d => d.IdGestor)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CITIZEN__id_gest__45F365D3");
+                    .HasConstraintName("FK__CITIZEN__id_gest__5629CD9C");
 
                 entity.HasOne(d => d.IdInstitutionNavigation)
                     .WithMany(p => p.Citizens)
                     .HasForeignKey(d => d.IdInstitution)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CITIZEN__id_inst__44FF419A");
+                    .HasConstraintName("FK__CITIZEN__id_inst__5535A963");
             });
 
             modelBuilder.Entity<Consult>(entity =>
@@ -166,23 +161,23 @@ namespace Project_POO.Context
                     .WithMany(p => p.Consults)
                     .HasForeignKey(d => d.IdCabin)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CONSULT__id_cabi__47DBAE45");
+                    .HasConstraintName("FK__CONSULT__id_cabi__5812160E");
 
                 entity.HasOne(d => d.IdCitizenNavigation)
                     .WithMany(p => p.Consults)
                     .HasForeignKey(d => d.IdCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__CONSULT__id_citi__48CFD27E");
+                    .HasConstraintName("FK__CONSULT__id_citi__59063A47");
             });
 
             modelBuilder.Entity<Employee>(entity =>
             {
                 entity.ToTable("EMPLOYEE");
 
-                entity.HasIndex(e => e.Adress, "UQ__EMPLOYEE__08D1A4B89C552594")
+                entity.HasIndex(e => e.Adress, "UQ__EMPLOYEE__08D1A4B842FBE57B")
                     .IsUnique();
 
-                entity.HasIndex(e => e.Email, "UQ__EMPLOYEE__AB6E616490B7F096")
+                entity.HasIndex(e => e.Email, "UQ__EMPLOYEE__AB6E616448191D05")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -213,20 +208,20 @@ namespace Project_POO.Context
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.IdCabin)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__EMPLOYEE__id_cab__440B1D61");
+                    .HasConstraintName("FK__EMPLOYEE__id_cab__5441852A");
 
                 entity.HasOne(d => d.IdTypeEmployeeNavigation)
                     .WithMany(p => p.Employees)
                     .HasForeignKey(d => d.IdTypeEmployee)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__EMPLOYEE__id_typ__4316F928");
+                    .HasConstraintName("FK__EMPLOYEE__id_typ__534D60F1");
             });
 
             modelBuilder.Entity<Gestor>(entity =>
             {
                 entity.ToTable("GESTOR");
 
-                entity.HasIndex(e => e.Username, "UQ__GESTOR__F3DBC572D20FADFC")
+                entity.HasIndex(e => e.Username, "UQ__GESTOR__F3DBC5728E51C6BD")
                     .IsUnique();
 
                 entity.Property(e => e.Id).HasColumnName("id");
@@ -309,7 +304,7 @@ namespace Project_POO.Context
                     .WithMany(p => p.Registers)
                     .HasForeignKey(d => d.IdGestor)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__REGISTER__id_ges__4222D4EF");
+                    .HasConstraintName("FK__REGISTER__id_ges__52593CB8");
             });
 
             modelBuilder.Entity<SecondaryEffect>(entity =>
@@ -332,7 +327,7 @@ namespace Project_POO.Context
                     .WithMany(p => p.SecondaryEffects)
                     .HasForeignKey(d => d.IdVaccinationProcess)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__SECONDARY__id_va__4AB81AF0");
+                    .HasConstraintName("FK__SECONDARY__id_va__5AEE82B9");
             });
 
             modelBuilder.Entity<Sickness>(entity =>
@@ -353,7 +348,7 @@ namespace Project_POO.Context
                     .WithMany(p => p.Sicknesses)
                     .HasForeignKey(d => d.IdCitizen)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__SICKNESS__id_cit__46E78A0C");
+                    .HasConstraintName("FK__SICKNESS__id_cit__571DF1D5");
             });
 
             modelBuilder.Entity<TypeEmployee>(entity =>
@@ -419,7 +414,7 @@ namespace Project_POO.Context
                     .WithMany(p => p.VaccinationProcesses)
                     .HasForeignKey(d => d.IdConsult)
                     .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK__VACCINATI__id_co__49C3F6B7");
+                    .HasConstraintName("FK__VACCINATI__id_co__59FA5E80");
             });
 
             OnModelCreatingPartial(modelBuilder);

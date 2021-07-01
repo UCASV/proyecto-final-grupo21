@@ -1,5 +1,4 @@
-﻿using Project_POO.Context;
-namespace Project_POO.ViewModel
+﻿namespace Project_POO.ViewModel
 {
     public class ConsultVM
     {

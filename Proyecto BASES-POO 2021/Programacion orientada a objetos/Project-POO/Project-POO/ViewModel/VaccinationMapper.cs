@@ -1,6 +1,4 @@
-﻿using Project_POO.Model;
-using Project_POO.Context;
-using System;
+﻿using System;
 namespace Project_POO.ViewModel
 {
     //Map -> Conversion o alteracion de un objeto(elemento) a otro

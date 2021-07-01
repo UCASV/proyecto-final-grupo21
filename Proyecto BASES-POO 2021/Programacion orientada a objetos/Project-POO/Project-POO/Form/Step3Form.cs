@@ -4,8 +4,6 @@ using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
-using Project_POO.Context;
-using Project_POO.Model;
 using Project_POO.ViewModel;
 
 namespace Project_POO

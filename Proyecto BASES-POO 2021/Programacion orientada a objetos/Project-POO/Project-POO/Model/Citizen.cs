@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Project_POO.Model
+namespace Project_POO
 {
     public partial class Citizen
     {
@@ -19,7 +19,7 @@ namespace Project_POO.Model
         public int Age { get; set; }
         public string Email { get; set; }
         public string Dui { get; set; }
-        public string Phone { get; set; }
+        public int Phone { get; set; }
         public string Adress { get; set; }
         public string FullName { get; set; }
 

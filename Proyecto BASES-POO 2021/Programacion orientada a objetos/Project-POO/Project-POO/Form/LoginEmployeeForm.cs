@@ -2,8 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using Project_POO.Context;
-using Project_POO.Model;
 
 namespace Project_POO.Form
 {

@@ -3,9 +3,7 @@ using System.Windows.Forms;
 using System.Collections.Generic;
 using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
-using Project_POO.Context;
-using Project_POO.Model;
-using Project_POO.Context;
+
 using System.Linq;
 
 namespace Project_POO

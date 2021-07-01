@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 #nullable disable
 
-namespace Project_POO.Model
+namespace Project_POO
 {
     public partial class Sickness
     {

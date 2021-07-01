@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
-using Project_POO.Context;
-using Project_POO.Model;
+
 
 namespace Project_POO.Form
 {
@@ -25,8 +24,10 @@ namespace Project_POO.Form
                 "Hospital MQ"
             };
             cmbVaccination.DataSource = places;
-        }
+        }      
 
+
+        
         private void btnRegister_Click_1(object sender, EventArgs e)
         {
             var db = new VaccinationContext();

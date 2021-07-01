@@ -31,6 +31,7 @@ namespace Project_POO
             string email = txtMail.Text;
             int institucion = ((Institution) cmbInstitution.SelectedItem).Id;
             string sickness = txtSickness.Text;
+            int gestor = ((Gestor) cmbGestor.SelectedItem).Id;
             
             var db = new VaccinationContext();
             List<Citizen> citizens = db.Citizens.ToList();
@@ -51,7 +52,9 @@ namespace Project_POO
                 Phone = Convert.ToInt32(phone),
                 Email = email,
                 IdInstitution = institucion,
-                Sicknesses = sicknesses
+                Sicknesses = sicknesses,
+                IdGestor = gestor
+                
             };
             bool validatePriorityGroup = ValidatePriorityGroup(AgeParse,institucion );
             bool Validation = ValidateData(FullName, Age, dui, address, phone, email, AgeParse);
@@ -149,7 +152,15 @@ namespace Project_POO
             cmbInstitution.DataSource = institutions;
             cmbInstitution.DisplayMember = "institution";
             cmbInstitution.ValueMember = "id";
+            
+            List<Gestor> gestors = db.Gestors
+                .ToList();
+            cmbGestor.DataSource = gestors;
+            cmbGestor.DisplayMember= "id";
+            cmbInstitution.ValueMember = "id";
+
         }
+        
     }
 }
     

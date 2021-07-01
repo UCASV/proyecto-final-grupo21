@@ -51,107 +51,121 @@ namespace Project_POO
             this.label9 = new System.Windows.Forms.Label();
             this.btnRegistrar = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.cmbGestor = new System.Windows.Forms.ComboBox();
+            this.Gestor = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label1.Location = new System.Drawing.Point(30, 68);
+            this.label1.Location = new System.Drawing.Point(40, 84);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(99, 27);
+            this.label1.Size = new System.Drawing.Size(132, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nombre y apellido:";
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(135, 68);
+            this.txtName.Location = new System.Drawing.Point(180, 84);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(151, 20);
+            this.txtName.Size = new System.Drawing.Size(200, 22);
             this.txtName.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label2.Location = new System.Drawing.Point(30, 140);
+            this.label2.Location = new System.Drawing.Point(40, 172);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 27);
+            this.label2.Size = new System.Drawing.Size(112, 33);
             this.label2.TabIndex = 2;
             this.label2.Text = "DUI:";
             // 
             // txtDUI
             // 
-            this.txtDUI.Location = new System.Drawing.Point(135, 140);
+            this.txtDUI.Location = new System.Drawing.Point(180, 172);
+            this.txtDUI.Margin = new System.Windows.Forms.Padding(4);
             this.txtDUI.Name = "txtDUI";
-            this.txtDUI.Size = new System.Drawing.Size(151, 20);
+            this.txtDUI.Size = new System.Drawing.Size(200, 22);
             this.txtDUI.TabIndex = 3;
             // 
             // label3
             // 
             this.label3.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label3.Location = new System.Drawing.Point(30, 177);
+            this.label3.Location = new System.Drawing.Point(40, 218);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(84, 27);
+            this.label3.Size = new System.Drawing.Size(112, 33);
             this.label3.TabIndex = 4;
             this.label3.Text = "domicilio actual:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // txtAdress
             // 
-            this.txtAdress.Location = new System.Drawing.Point(135, 177);
+            this.txtAdress.Location = new System.Drawing.Point(180, 218);
+            this.txtAdress.Margin = new System.Windows.Forms.Padding(4);
             this.txtAdress.Multiline = true;
             this.txtAdress.Name = "txtAdress";
-            this.txtAdress.Size = new System.Drawing.Size(151, 38);
+            this.txtAdress.Size = new System.Drawing.Size(200, 46);
             this.txtAdress.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label4.Location = new System.Drawing.Point(30, 236);
+            this.label4.Location = new System.Drawing.Point(40, 290);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(84, 27);
+            this.label4.Size = new System.Drawing.Size(112, 33);
             this.label4.TabIndex = 6;
             this.label4.Text = "teléfono:";
             // 
             // txtPhone
             // 
-            this.txtPhone.Location = new System.Drawing.Point(135, 236);
+            this.txtPhone.Location = new System.Drawing.Point(180, 290);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4);
             this.txtPhone.Name = "txtPhone";
-            this.txtPhone.Size = new System.Drawing.Size(151, 20);
+            this.txtPhone.Size = new System.Drawing.Size(200, 22);
             this.txtPhone.TabIndex = 7;
             // 
             // label5
             // 
             this.label5.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label5.Location = new System.Drawing.Point(30, 275);
+            this.label5.Location = new System.Drawing.Point(40, 338);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(117, 45);
+            this.label5.Size = new System.Drawing.Size(156, 55);
             this.label5.TabIndex = 8;
             this.label5.Text = "correo electrónico (opcional):";
             // 
             // label6
             // 
             this.label6.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label6.Location = new System.Drawing.Point(30, 323);
+            this.label6.Location = new System.Drawing.Point(40, 382);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(117, 45);
+            this.label6.Size = new System.Drawing.Size(156, 55);
             this.label6.TabIndex = 10;
             this.label6.Text = "padecimientos crónicos:";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // txtSickness
             // 
-            this.txtSickness.Location = new System.Drawing.Point(135, 323);
+            this.txtSickness.Location = new System.Drawing.Point(180, 398);
+            this.txtSickness.Margin = new System.Windows.Forms.Padding(4);
             this.txtSickness.Multiline = true;
             this.txtSickness.Name = "txtSickness";
-            this.txtSickness.Size = new System.Drawing.Size(151, 45);
+            this.txtSickness.Size = new System.Drawing.Size(200, 28);
             this.txtSickness.TabIndex = 11;
             // 
             // label7
             // 
             this.label7.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label7.Location = new System.Drawing.Point(30, 389);
+            this.label7.Location = new System.Drawing.Point(40, 456);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 27);
+            this.label7.Size = new System.Drawing.Size(112, 33);
             this.label7.TabIndex = 12;
             this.label7.Text = "entidad gubernamental:";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -159,25 +173,28 @@ namespace Project_POO
             // label8
             // 
             this.label8.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label8.Location = new System.Drawing.Point(30, 103);
+            this.label8.Location = new System.Drawing.Point(40, 127);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(84, 27);
+            this.label8.Size = new System.Drawing.Size(112, 33);
             this.label8.TabIndex = 14;
             this.label8.Text = "edad:";
             // 
             // cmbInstitution
             // 
             this.cmbInstitution.FormattingEnabled = true;
-            this.cmbInstitution.Location = new System.Drawing.Point(135, 389);
+            this.cmbInstitution.Location = new System.Drawing.Point(180, 461);
+            this.cmbInstitution.Margin = new System.Windows.Forms.Padding(4);
             this.cmbInstitution.Name = "cmbInstitution";
-            this.cmbInstitution.Size = new System.Drawing.Size(151, 21);
+            this.cmbInstitution.Size = new System.Drawing.Size(200, 24);
             this.cmbInstitution.TabIndex = 15;
             // 
             // txtMail
             // 
-            this.txtMail.Location = new System.Drawing.Point(135, 282);
+            this.txtMail.Location = new System.Drawing.Point(180, 347);
+            this.txtMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtMail.Name = "txtMail";
-            this.txtMail.Size = new System.Drawing.Size(151, 20);
+            this.txtMail.Size = new System.Drawing.Size(200, 22);
             this.txtMail.TabIndex = 16;
             // 
             // lblChange
@@ -185,9 +202,10 @@ namespace Project_POO
             this.lblChange.BackColor = System.Drawing.Color.Transparent;
             this.lblChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.lblChange.ForeColor = System.Drawing.Color.Black;
-            this.lblChange.Location = new System.Drawing.Point(85, 503);
+            this.lblChange.Location = new System.Drawing.Point(225, 603);
+            this.lblChange.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblChange.Name = "lblChange";
-            this.lblChange.Size = new System.Drawing.Size(186, 27);
+            this.lblChange.Size = new System.Drawing.Size(259, 52);
             this.lblChange.TabIndex = 17;
             this.lblChange.Text = "¿Ya posees una cita? Haz click aquí si ya tienes una cita programada.";
             this.lblChange.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -195,17 +213,19 @@ namespace Project_POO
             // 
             // txtAge
             // 
-            this.txtAge.Location = new System.Drawing.Point(135, 103);
+            this.txtAge.Location = new System.Drawing.Point(180, 127);
+            this.txtAge.Margin = new System.Windows.Forms.Padding(4);
             this.txtAge.Name = "txtAge";
-            this.txtAge.Size = new System.Drawing.Size(151, 20);
+            this.txtAge.Size = new System.Drawing.Size(200, 22);
             this.txtAge.TabIndex = 18;
             // 
             // label9
             // 
             this.label9.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.label9.Location = new System.Drawing.Point(85, 23);
+            this.label9.Location = new System.Drawing.Point(113, 28);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(186, 27);
+            this.label9.Size = new System.Drawing.Size(248, 33);
             this.label9.TabIndex = 19;
             this.label9.Text = "Bienvenido a Programación de Citas";
             // 
@@ -213,10 +233,10 @@ namespace Project_POO
             // 
             this.btnRegistrar.BackColor = System.Drawing.Color.White;
             this.btnRegistrar.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnRegistrar.Location = new System.Drawing.Point(74, 432);
-            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(2);
+            this.btnRegistrar.Location = new System.Drawing.Point(12, 607);
+            this.btnRegistrar.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(82, 37);
+            this.btnRegistrar.Size = new System.Drawing.Size(99, 46);
             this.btnRegistrar.TabIndex = 20;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.UseVisualStyleBackColor = true;
@@ -226,21 +246,39 @@ namespace Project_POO
             // 
             this.btnCancel.BackColor = System.Drawing.Color.White;
             this.btnCancel.ForeColor = System.Drawing.SystemColors.Desktop;
-            this.btnCancel.Location = new System.Drawing.Point(204, 432);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(127, 609);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(82, 37);
+            this.btnCancel.Size = new System.Drawing.Size(91, 46);
             this.btnCancel.TabIndex = 21;
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.UseVisualStyleBackColor = true;
             this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
+            // cmbGestor
+            // 
+            this.cmbGestor.FormattingEnabled = true;
+            this.cmbGestor.Location = new System.Drawing.Point(180, 525);
+            this.cmbGestor.Name = "cmbGestor";
+            this.cmbGestor.Size = new System.Drawing.Size(200, 24);
+            this.cmbGestor.TabIndex = 22;
+            // 
+            // Gestor
+            // 
+            this.Gestor.Location = new System.Drawing.Point(60, 528);
+            this.Gestor.Name = "Gestor";
+            this.Gestor.Size = new System.Drawing.Size(124, 19);
+            this.Gestor.TabIndex = 23;
+            this.Gestor.Text = "Gestor";
+            // 
             // AppointmentForm2
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (0)))), ((int) (((byte) (136)))), ((int) (((byte) (182)))));
-            this.ClientSize = new System.Drawing.Size(347, 539);
+            this.ClientSize = new System.Drawing.Size(497, 692);
+            this.Controls.Add(this.Gestor);
+            this.Controls.Add(this.cmbGestor);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnRegistrar);
             this.Controls.Add(this.label9);
@@ -262,6 +300,7 @@ namespace Project_POO
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.label1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AppointmentForm2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Registro de Ciudadano";
@@ -269,6 +308,11 @@ namespace Project_POO
             this.ResumeLayout(false);
             this.PerformLayout();
         }
+
+        private System.Windows.Forms.ComboBox cmbGestor;
+        private System.Windows.Forms.Label Gestor;
+
+        private System.Windows.Forms.ComboBox comboBox1;
 
         private System.Windows.Forms.Button btnCancel;
 

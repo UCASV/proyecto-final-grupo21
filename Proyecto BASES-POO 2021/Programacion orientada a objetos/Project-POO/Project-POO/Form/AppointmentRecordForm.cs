@@ -13,8 +13,8 @@ namespace Project_POO.Form
         {
             InitializeComponent();
         }
-
-        private void AppointmentRecordForm_Load(object sender, EventArgs e)
+ 
+        private void AppointmentRecordForm_Load_1(object sender, EventArgs e)
         {
             var places = new List<string>()
             {
@@ -24,10 +24,10 @@ namespace Project_POO.Form
                 "Hospital Maternidad",
                 "Hospital MQ"
             };
-            comboBox1.DataSource = places;
+            cmbVaccination.DataSource = places;
         }
 
-        private void btnRegister_Click(object sender, EventArgs e)
+        private void btnRegister_Click_1(object sender, EventArgs e)
         {
             var db = new VaccinationContext();
 
@@ -86,7 +86,7 @@ namespace Project_POO.Form
             {
                 VaccunationDay = date,
                 VaccunationTime = hour,
-                VaccunationPlace = (string) (comboBox1.SelectedItem)
+                VaccunationPlace = (string) (cmbVaccination.SelectedItem)
             };
             processes.Add(Process);
 
@@ -112,5 +112,6 @@ namespace Project_POO.Form
             window.Show();
 
         }
+
     }
 }

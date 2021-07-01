@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel;
 
-namespace Project_POO
+namespace Project_POO.Form
 {
     partial class Step1Form
     {

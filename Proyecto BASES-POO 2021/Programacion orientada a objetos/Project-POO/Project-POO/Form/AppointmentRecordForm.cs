@@ -34,8 +34,8 @@ namespace Project_POO.Form
 
             string date = txtDate.Text;
             string hour = txtHour.Text;
-            string save = "";
-            string secondSave = "";
+            string save = null;
+            string secondSave = null;
             var cabins = db.Cabins.ToList();
 
             if (txtCabin.Text.Length != 0)
@@ -80,14 +80,15 @@ namespace Project_POO.Form
                 IdCabin = Convert.ToInt32(save),
                 IdCitizen = Convert.ToInt32(secondSave)
             };
-            consults.Add(consult);
-
+            
         var processes = db.VaccinationProcesses.ToHashSet();
             var Process = new VaccinationProcess()
             {
                 VaccunationDay = date,
                 VaccunationTime = hour,
-                VaccunationPlace = (string) (cmbVaccination.SelectedItem)
+                VaccunationPlace = (string) (cmbVaccination.SelectedItem),
+                SecondVaccinationDay = "Pendiente",
+                SecondVaccinationTime = "Pendiente"
             };
             processes.Add(Process);
 
@@ -106,13 +107,12 @@ namespace Project_POO.Form
                 }
             }
             Process.IdConsult = consultId;
-            
+            consults.Add(consult);
             db.SaveChanges();
             Hide();
             var window = new AppointmentForm();
             window.Show();
 
         }
-
     }
 }

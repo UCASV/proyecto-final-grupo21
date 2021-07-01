@@ -1,16 +1,14 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Timers;
 using System.Windows.Forms;
 using Microsoft.EntityFrameworkCore;
-using Project_POO.ViewModel;
 
-namespace Project_POO
+namespace Project_POO.Form
 {
     public partial class Step3Form : System.Windows.Forms.Form
     {
-        private bool showFromDb = false;
+
         int tiempo = 0;
         public Step3Form()
         {

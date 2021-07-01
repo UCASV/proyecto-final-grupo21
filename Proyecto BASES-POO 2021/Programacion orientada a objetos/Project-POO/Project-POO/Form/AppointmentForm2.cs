@@ -42,20 +42,7 @@ namespace Project_POO
                 Sickness1 = sickness
             };
             sicknesses.Add(Sickness);
-            
-            Citizen citizen = new Citizen()
-            {
-                FullName = FullName,
-                Age = AgeParse,
-                Dui = dui,
-                Adress = address,
-                Phone = Convert.ToInt32(phone),
-                Email = email,
-                IdInstitution = institucion,
-                Sicknesses = sicknesses,
-                IdGestor = gestor
-                
-            };
+    
             bool validatePriorityGroup = ValidatePriorityGroup(AgeParse,institucion );
             bool Validation = ValidateData(FullName, Age, dui, address, phone, email, AgeParse);
 
@@ -67,6 +54,19 @@ namespace Project_POO
             {
                 if (validatePriorityGroup)
                 {
+                    Citizen citizen = new Citizen()
+                    {
+                        FullName = FullName,
+                        Age = AgeParse,
+                        Dui = dui,
+                        Adress = address,
+                        Phone = Convert.ToInt32(phone),
+                        Email = email,
+                        IdInstitution = institucion,
+                        Sicknesses = sicknesses,
+                        IdGestor = gestor
+                
+                    };
                     MessageBox.Show("Usted pertenece a uno de los grupos de prioridad de vacunación", "Registrando...",
                         MessageBoxButtons.OK, MessageBoxIcon.Information);
                     MessageBox.Show("Se registró el ciudadano", "Registro exitoso", MessageBoxButtons.OK,

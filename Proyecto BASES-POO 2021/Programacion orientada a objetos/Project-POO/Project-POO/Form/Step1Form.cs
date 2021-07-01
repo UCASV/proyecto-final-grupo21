@@ -1,13 +1,9 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
-using System.Collections.Generic;
-using System.Data.Common;
 using Microsoft.EntityFrameworkCore;
 
-using System.Linq;
-
-
-namespace Project_POO
+namespace Project_POO.Form
 {
     public partial class Step1Form : System.Windows.Forms.Form
     {
@@ -98,7 +94,7 @@ namespace Project_POO
             }
             else
                 MessageBox.Show("Ha habido un error al acceder al proceso de vacunación. Por favor, verifique si ha digitado bien el DUI o si no se ha marcado la " + 
-                                "confirmación de consentimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);          
+                                "confirmación de consentimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

@@ -48,7 +48,7 @@ namespace Project_POO.Form
             this.btnContinuar.BackColor = System.Drawing.Color.MediumAquamarine;
             this.btnContinuar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnContinuar.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.btnContinuar.Location = new System.Drawing.Point(627, 184);
+            this.btnContinuar.Location = new System.Drawing.Point(693, 184);
             this.btnContinuar.Margin = new System.Windows.Forms.Padding(4);
             this.btnContinuar.Name = "btnContinuar";
             this.btnContinuar.Size = new System.Drawing.Size(316, 70);

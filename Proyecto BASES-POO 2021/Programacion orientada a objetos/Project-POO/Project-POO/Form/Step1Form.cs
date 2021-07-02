@@ -68,33 +68,38 @@ namespace Project_POO.Form
                 })
                 .ToList();
             
+            
+            
             dgvPreChequeo.DataSource = null;
             dgvPreChequeo.DataSource = listPatient;
         }
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            var validationdui = new VaccinationContext();
-            bool validate = true;
-            foreach (var citizen in validationdui.Citizens.ToList())
             {
-                string verificationdui = txtDui.Text;
-                if (verificationdui != citizen.Dui)
-                    validate = false;
-                else
-                    validate = true;
-            }
+                var validationdui = new VaccinationContext();
+                bool validate = true;
+                foreach (var citizen in validationdui.Citizens.ToList())
+                {
+                    string verificationdui = txtDui.Text;
+                    if (verificationdui != citizen.Dui)
+                        validate = false;
+                    else
+                        validate = true;
+                }
 
-            bool validation = checkBox1.Checked == true && txtDui.Text.Length == 9;
-            if (validation && validate)
-            {
-                Hide();
-                var window = new Step2Form();
-                window.Show();
+                bool validation = checkBox1.Checked == true && txtDui.Text.Length == 9;
+                if (validation && validate)
+                {
+                    Hide();
+                    var window = new Step2Form();
+                    window.Show();
+                }
+                else
+                    MessageBox.Show(
+                        "Ha habido un error al acceder al proceso de vacunación. Por favor, verifique si ha digitado bien el DUI o si no se ha marcado la " +
+                        "confirmación de consentimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else
-                MessageBox.Show("Ha habido un error al acceder al proceso de vacunación. Por favor, verifique si ha digitado bien el DUI o si no se ha marcado la " + 
-                                "confirmación de consentimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
     }
 }

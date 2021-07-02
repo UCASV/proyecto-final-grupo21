@@ -4,11 +4,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Windows.Forms.VisualStyles;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Conventions;
 using Project_POO.ViewModel;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
+using Font = System.Drawing.Font;
+
 
 namespace Project_POO
 {
@@ -62,27 +64,27 @@ namespace Project_POO
                     PdfPTable tblconsult = new PdfPTable(6);
                     tblconsult.WidthPercentage = 100;
                     
-                    PdfPCell clDUI = new PdfPCell(new Phrase("DUI", new Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
+                    PdfPCell clDUI = new PdfPCell(new Phrase("DUI", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
                     clDUI.BorderWidth = 0;
                     clDUI.BorderWidthBottom = 0.75f;
  
-                    PdfPCell clName = new PdfPCell(new Phrase("Nombre Completo", new Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
+                    PdfPCell clName = new PdfPCell(new Phrase("Nombre Completo", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
                     clName.BorderWidth = 0;
                     clName.BorderWidthBottom = 0.75f;
  
-                    PdfPCell clDate = new PdfPCell(new Phrase("Fecha de cita", new Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
+                    PdfPCell clDate = new PdfPCell(new Phrase("Fecha de cita", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
                     clDate.BorderWidth = 0;
                     clDate.BorderWidthBottom = 0.75f;
 
-                    PdfPCell clTime = new PdfPCell(new Phrase("Hora de cita", new Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
+                    PdfPCell clTime = new PdfPCell(new Phrase("Hora de cita", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
                     clTime.BorderWidth = 0;
                     clTime.BorderWidthBottom = 0.75f;
                     
-                    PdfPCell clPhone = new PdfPCell(new Phrase("Celular", new Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
+                    PdfPCell clPhone = new PdfPCell(new Phrase("Celular", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
                     clPhone.BorderWidth = 0;
                     clPhone.BorderWidthBottom = 0.75f;
                     
-                    PdfPCell clAge = new PdfPCell(new Phrase("Edad", new Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
+                    PdfPCell clAge = new PdfPCell(new Phrase("Edad", new iTextSharp.text.Font(iTextSharp.text.Font.FontFamily.HELVETICA)));
                     clAge.BorderWidth = 0;
                     clAge.BorderWidthBottom = 0.75f;
 

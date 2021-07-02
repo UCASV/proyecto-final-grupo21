@@ -57,7 +57,7 @@ namespace Project_POO
                     Citizen citizen = new Citizen()
                     {
                         FullName = FullName,
-                        Age = AgeParse,
+                        Age = Convert.ToInt32(Age),
                         Dui = dui,
                         Adress = address,
                         Phone = Convert.ToInt32(phone),

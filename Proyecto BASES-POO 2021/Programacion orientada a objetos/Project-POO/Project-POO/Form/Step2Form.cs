@@ -1,12 +1,9 @@
 ﻿using System;
-using System.Windows.Forms;
 using System.Collections.Generic;
-using System.Data.Common;
-using Microsoft.EntityFrameworkCore;
-
 using System.Linq;
+using System.Windows.Forms;
 
-namespace Project_POO
+namespace Project_POO.Form
 {
     public partial class Step2Form : System.Windows.Forms.Form
     {

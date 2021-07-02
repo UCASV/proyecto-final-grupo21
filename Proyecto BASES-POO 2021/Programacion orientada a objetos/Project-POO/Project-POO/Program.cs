@@ -18,7 +18,7 @@ namespace Project_POO
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AppointmentRecordForm());
+            Application.Run(new ProgrammingAppointmentForm());
         }
     }
 }

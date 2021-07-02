@@ -42,7 +42,10 @@ namespace Project_POO.Form
 
         private void btnContinuar_Click(object sender, EventArgs e)
         {
-            {
+            Hide();
+            var window = new Step2Form();
+            window.Show();
+            /*{
                 var validationdui = new VaccinationContext();
                 bool validate = true;
                 foreach (var citizen in validationdui.Citizens.ToList())
@@ -65,7 +68,7 @@ namespace Project_POO.Form
                     MessageBox.Show(
                         "Ha habido un error al acceder al proceso de vacunación. Por favor, verifique si ha digitado bien el DUI o si no se ha marcado la " +
                         "confirmación de consentimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            }*/
         }
 
         private void lbl1_Click_1(object sender, EventArgs e)

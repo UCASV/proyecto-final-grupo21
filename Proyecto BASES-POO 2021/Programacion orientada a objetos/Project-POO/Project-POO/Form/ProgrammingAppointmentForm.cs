@@ -123,5 +123,12 @@ namespace Project_POO
 
             }
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Hide();
+            var window = new AppointmentForm();
+            window.Show();
+        }
     }
 }

@@ -25,15 +25,10 @@ namespace Project_POO.Form
             if (prbVacunando.Value == 100)
                 timer.Enabled = false;
         }
-        private void btnDui_Click(object sender, EventArgs e)
+        
+        private void btnSearch_Click_1(object sender, EventArgs e)
         {
-            timer.Enabled = true;
-            prbVacunando.Value = 0;
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
             var db = new VaccinationContext();
             
             var listPatient = db.Consults
@@ -58,7 +53,12 @@ namespace Project_POO.Form
             
             dataGridView.DataSource = null;
             dataGridView.DataSource = listPatient; 
-            
+        }
+
+        private void btnVacunar_Click(object sender, EventArgs e)
+        {
+            timer.Enabled = true;
+            prbVacunando.Value = 0;
         }
     }
 }

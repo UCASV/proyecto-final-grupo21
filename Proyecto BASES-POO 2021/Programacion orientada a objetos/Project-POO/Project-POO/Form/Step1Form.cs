@@ -11,39 +11,7 @@ namespace Project_POO.Form
         {
             InitializeComponent();
         }
-
-        /*private void button1_Click(object sender, EventArgs e)
-        {
-            var validationdui = new VaccinationContext();
-            bool validate = true;
-            foreach (var citizen in validationdui.Citizens.ToList())
-            {
-                string verificationdui = textBox1.Text;
-                if (verificationdui != citizen.Dui)
-                    validate = false;
-                else
-                    validate = true;
-            }
-
-            bool validation = checkBox1.Checked == true && textBox1.Text.Length == 9;
-            if (validation && validate)
-            {
-                Hide();
-                var window = new Step2Form();
-                window.Show();
-            }
-            else
-                MessageBox.Show("Ha habido un error al acceder al proceso de vacunación. Por favor, verifique si ha digitado bien el DUI o si no se ha marcado la " + 
-                                "confirmación de consentimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-        }*/
         
-        private void lbl1_Click(object sender, EventArgs e)
-        {
-            Hide();
-            var window = new AppointmentForm2();
-            window.Show();
-        }
-
         private void btnVerifyDui_Click(object sender, EventArgs e)
         {
             var db = new VaccinationContext();
@@ -67,9 +35,7 @@ namespace Project_POO.Form
                     //Hora_vacuna = x.HourVaccine
                 })
                 .ToList();
-            
-            
-            
+        
             dgvPreChequeo.DataSource = null;
             dgvPreChequeo.DataSource = listPatient;
         }
@@ -100,6 +66,13 @@ namespace Project_POO.Form
                         "Ha habido un error al acceder al proceso de vacunación. Por favor, verifique si ha digitado bien el DUI o si no se ha marcado la " +
                         "confirmación de consentimiento.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void lbl1_Click_1(object sender, EventArgs e)
+        {
+            Hide();
+            var window = new AppointmentForm2();
+            window.Show();
         }
     }
 }

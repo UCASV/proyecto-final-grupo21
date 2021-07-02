@@ -32,12 +32,13 @@ namespace Project_POO.Form
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.btnDui = new System.Windows.Forms.Button();
             this.timer = new System.Timers.Timer();
             this.prbVacunando = new System.Windows.Forms.ProgressBar();
             this.dataGridView = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSearch = new System.Windows.Forms.Button();
             this.txtDui = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnVacunar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize) (this.timer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize) (this.dataGridView)).BeginInit();
             this.SuspendLayout();
@@ -45,21 +46,11 @@ namespace Project_POO.Form
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
-            this.label1.Location = new System.Drawing.Point(188, 9);
+            this.label1.Location = new System.Drawing.Point(171, 9);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(465, 49);
             this.label1.TabIndex = 50;
-            this.label1.Text = "Seguimiento de Citas\r\n";
-            // 
-            // btnDui
-            // 
-            this.btnDui.Location = new System.Drawing.Point(188, 370);
-            this.btnDui.Name = "btnDui";
-            this.btnDui.Size = new System.Drawing.Size(106, 42);
-            this.btnDui.TabIndex = 51;
-            this.btnDui.Text = "Confirmar";
-            this.btnDui.UseVisualStyleBackColor = true;
-            this.btnDui.Click += new System.EventHandler(this.btnDui_Click);
+            this.label1.Text = "Aplicacion de primera dosis";
             // 
             // timer
             // 
@@ -68,9 +59,9 @@ namespace Project_POO.Form
             // 
             // prbVacunando
             // 
-            this.prbVacunando.Location = new System.Drawing.Point(24, 418);
+            this.prbVacunando.Location = new System.Drawing.Point(12, 338);
             this.prbVacunando.Name = "prbVacunando";
-            this.prbVacunando.Size = new System.Drawing.Size(675, 47);
+            this.prbVacunando.Size = new System.Drawing.Size(749, 54);
             this.prbVacunando.TabIndex = 52;
             // 
             // dataGridView
@@ -79,36 +70,57 @@ namespace Project_POO.Form
             this.dataGridView.Location = new System.Drawing.Point(24, 67);
             this.dataGridView.Name = "dataGridView";
             this.dataGridView.RowTemplate.Height = 24;
-            this.dataGridView.Size = new System.Drawing.Size(675, 234);
+            this.dataGridView.Size = new System.Drawing.Size(735, 68);
             this.dataGridView.TabIndex = 53;
             // 
-            // button1
+            // btnSearch
             // 
-            this.button1.Location = new System.Drawing.Point(427, 370);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(117, 41);
-            this.button1.TabIndex = 54;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSearch.Location = new System.Drawing.Point(225, 157);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(86, 52);
+            this.btnSearch.TabIndex = 54;
+            this.btnSearch.Text = "Buscar DUI";
+            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click_1);
             // 
             // txtDui
             // 
-            this.txtDui.Location = new System.Drawing.Point(280, 307);
+            this.txtDui.Location = new System.Drawing.Point(24, 166);
+            this.txtDui.Multiline = true;
             this.txtDui.Name = "txtDui";
-            this.txtDui.Size = new System.Drawing.Size(163, 22);
+            this.txtDui.Size = new System.Drawing.Size(183, 33);
             this.txtDui.TabIndex = 56;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.label2.Location = new System.Drawing.Point(307, 253);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(131, 34);
+            this.label2.TabIndex = 57;
+            this.label2.Text = "Vacunar";
+            // 
+            // btnVacunar
+            // 
+            this.btnVacunar.Location = new System.Drawing.Point(322, 290);
+            this.btnVacunar.Name = "btnVacunar";
+            this.btnVacunar.Size = new System.Drawing.Size(96, 42);
+            this.btnVacunar.TabIndex = 58;
+            this.btnVacunar.Text = "Aplicar";
+            this.btnVacunar.UseVisualStyleBackColor = true;
+            this.btnVacunar.Click += new System.EventHandler(this.btnVacunar_Click);
             // 
             // Step3Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(711, 497);
+            this.ClientSize = new System.Drawing.Size(774, 402);
+            this.Controls.Add(this.btnVacunar);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtDui);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.dataGridView);
             this.Controls.Add(this.prbVacunando);
-            this.Controls.Add(this.btnDui);
             this.Controls.Add(this.label1);
             this.Name = "Step3Form";
             this.Text = "Primera dosis";
@@ -118,18 +130,20 @@ namespace Project_POO.Form
             this.PerformLayout();
         }
 
-        private System.Windows.Forms.TextBox txtDui;
+        private System.Windows.Forms.Button btnVacunar;
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSearch;
+        private System.Windows.Forms.Label label2;
+
+        private System.Windows.Forms.TextBox txtDui;
+        
 
         private System.Windows.Forms.DataGridView dataGridView;
 
         private System.Timers.Timer timer;
 
         private System.Windows.Forms.ProgressBar prbVacunando;
-        
 
-        private System.Windows.Forms.Button btnDui;
 
         private System.Windows.Forms.Label label1;
 

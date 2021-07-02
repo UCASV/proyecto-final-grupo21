@@ -119,6 +119,7 @@ namespace Project_POO.Form
             this.lbl1.TabIndex = 48;
             this.lbl1.Text = "¿Aun no has agendado una cita? Haz click aquí";
             this.lbl1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbl1.Click += new System.EventHandler(this.lbl1_Click_1);
             // 
             // dgvPreChequeo
             // 

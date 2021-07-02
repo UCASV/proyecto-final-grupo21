@@ -31,6 +31,8 @@ namespace Project_POO.Form
                 MessageBox.Show("Se registró la fecha y el dia exitosamente", "Registro exitoso", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
                 Hide();
+                var window = new Step3Form();
+                window.Show();
             }
         }
     }

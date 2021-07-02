@@ -22,8 +22,14 @@ namespace Project_POO.Form
             
             if (prbVacunando.Value < 100)
                 prbVacunando.Value++;
-            if (prbVacunando.Value == 100)
+         
+            if (prbVacunando.Value == prbVacunando.Maximum)
+            {
                 timer.Enabled = false;
+                Hide();
+                var window = new FouthVaccinationStep();
+                window.Show();
+            }
         }
         
         private void btnSearch_Click_1(object sender, EventArgs e)
@@ -37,17 +43,13 @@ namespace Project_POO.Form
                 .Where(i=> i.IdCitizenNavigation.Dui.Equals(txtDui.Text))
                 .Select(x => new
                 {
-                    //Numero_de_cita = x.Id,
                     Nombre = x.IdCitizenNavigation.FullName,
                     DUI = x.IdCitizenNavigation.Dui,
                     Telefono = x.IdCitizenNavigation.Phone,
                     Direccion = x.IdCitizenNavigation.Adress,
-                    //Email = x.IdCitizenNavigation.Email,
                     Cabina = x.IdCabinNavigation.Adress,
                     Fecha_cita = Convert.ToDateTime(x.ConsultationDay.ToString()).ToString("yyyy-MM-dd"),
                     Hora_cita = x.ConsultationTime,
-                    //Hora_llegada = x.HourArrival,
-                    //Hora_vacuna = x.HourVaccine
                 })
                 .ToList();
             

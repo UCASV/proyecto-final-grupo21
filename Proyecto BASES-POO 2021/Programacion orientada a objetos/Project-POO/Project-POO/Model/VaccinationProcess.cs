@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
@@ -11,7 +12,7 @@ namespace Project_POO
         {
             SecondaryEffects = new HashSet<SecondaryEffect>();
         }
-
+        [Key]
         public int Id { get; set; }
         public string VaccunationDay { get; set; }
         public string VaccunationTime { get; set; }

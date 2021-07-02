@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/projectSettingsUpdater.xml
+/modules.xml
+/contentModel.xml
+/.idea.Project-POO.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../../../../:\Users\ACER\Documents\Workspace\POO012021\proyecto-final-grupo21\Proyecto BASES-POO 2021\Programacion orientada a objetos\Project-POO\Project-POO\.idea\.idea.Project-POO.dir\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/

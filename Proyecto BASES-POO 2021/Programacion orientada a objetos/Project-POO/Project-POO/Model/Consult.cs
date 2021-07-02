@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace Project_POO.Model
+namespace Project_POO
 {
     public partial class Consult
     {
@@ -11,7 +12,8 @@ namespace Project_POO.Model
         {
             VaccinationProcesses = new HashSet<VaccinationProcess>();
         }
-
+        
+        [Key]
         public int Id { get; set; }
         public string ConsultationDay { get; set; }
         public string ConsultationTime { get; set; }

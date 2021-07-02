@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 #nullable disable
 
-namespace Project_POO.Model
+namespace Project_POO
 {
     public partial class VaccinationProcess
     {
@@ -11,7 +12,7 @@ namespace Project_POO.Model
         {
             SecondaryEffects = new HashSet<SecondaryEffect>();
         }
-
+        [Key]
         public int Id { get; set; }
         public string VaccunationDay { get; set; }
         public string VaccunationTime { get; set; }

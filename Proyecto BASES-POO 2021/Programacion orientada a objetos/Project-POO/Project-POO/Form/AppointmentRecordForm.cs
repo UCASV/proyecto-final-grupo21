@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Windows.Forms;
 
@@ -35,35 +36,28 @@ namespace Project_POO.Form
             string date = txtDate.Text;
             string hour = txtHour.Text;
             string save = null;
+            int id_cabin = 0;
+            int id_cabin2 = 0;
             string secondSave = null;
             var cabins = db.Cabins.ToList();
 
             if (txtCabin.Text.Length != 0)
             {
-                var idCabin = cabins.Where(cabin => cabin.Id.Equals(txtCabin.Text)).ToList();
-
-                foreach (var cabin in idCabin)
-                {
-                    save = Convert.ToString(cabin.Id);
-                }
-
+                var idCabin = cabins.Where(cabin => cabin.Id.Equals(Convert.ToInt32(txtCabin.Text))).ToList();
+                id_cabin = idCabin.First().Id;
             }
             else
             {
                 MessageBox.Show("Número de cabina inexsistente", "ingrese un número de cabina existente",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
-
+            
             var citizens = db.Citizens.ToList();
 
             if (txtIdCitizen.Text.Length != 0)
             {
-                var idCitizen = citizens.Where(citizen => citizen.Id.Equals(txtIdCitizen.Text)).ToList();
-                foreach (var citizen in idCitizen)
-                {
-                    secondSave = Convert.ToString(citizen.Id);
-                }
+                var idCitizen = citizens.Where(citizen => citizen.Id.Equals(Convert.ToInt32(txtIdCitizen.Text))).ToList();
+                id_cabin2 = idCitizen.First().Id;
             }
             else
             {
@@ -71,16 +65,19 @@ namespace Project_POO.Form
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-
-            var consults = db.Consults.ToHashSet();
             Consult consult = new Consult()
             {
                 ConsultationDay = date,
                 ConsultationTime = hour,
-                IdCabin = Convert.ToInt32(save),
-                IdCitizen = Convert.ToInt32(secondSave)
+                IdCabin = id_cabin,
+                IdCitizen = id_cabin2
             };
-            
+            Debug.WriteLine(consult.Id);
+            var consults = db.Consults.ToHashSet();
+            db.Consults.Add(consult);
+            db.SaveChanges();
+
+            Debug.WriteLine("paso1");
         var processes = db.VaccinationProcesses.ToHashSet();
             var Process = new VaccinationProcess()
             {
@@ -90,8 +87,8 @@ namespace Project_POO.Form
                 SecondVaccinationDay = "Pendiente",
                 SecondVaccinationTime = "Pendiente"
             };
-            processes.Add(Process);
-
+            db.VaccinationProcesses.Add(Process);
+            Debug.WriteLine("paso2");
             int consultId = 0;
 
             foreach (var c in consults)
@@ -107,7 +104,6 @@ namespace Project_POO.Form
                 }
             }
             Process.IdConsult = consultId;
-            consults.Add(consult);
             db.SaveChanges();
             Hide();
             var window = new AppointmentForm();
